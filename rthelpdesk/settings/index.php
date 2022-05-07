@@ -46,9 +46,6 @@
                     if ($_GET["page"] === "changetheme") {
                         include("./changeThemeForm.php");
                     }
-                    if ($_GET["page"] === "changestatus") {
-                        include("./changeStatusForm.php");
-                    }
                 }
                 if (isset($_GET["action"])) {
                     if ($_GET["action"] === "changepassword") {
