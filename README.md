@@ -1,0 +1,1 @@
+# spseplzen_absolutorium
