@@ -54,7 +54,6 @@
                     if ($_GET["action"] === "changetheme") {
                         include("./includes/changeThemeAction.inc.php");
                     }
-                    
                 }
             }
             ?>
