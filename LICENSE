@@ -1,12 +1,9 @@
-do What The Fuck you want to Public License
+rtlicense
 
-Version 1.0, March 2000
+Version 1.0, May 2022
 Copyright (C) 2000 Banlu Kemiyatorn (]d).
-136 Nives 7 Jangwattana 14 Laksi Bangkok
-Everyone is permitted to copy and distribute verbatim copies
-of this license document, but changing it is not allowed.
 
-Ok, the purpose of this license is simple
-and you just
-
-DO WHAT THE FUCK YOU WANT TO.
+Do whatever you want with code of this application and contents of this repository, with following exceptions
+    PHPMailer - follow their own GPL license
+    media files - images are for demonstration purposes only and are my property
+Otherwise share, copy and improve!
