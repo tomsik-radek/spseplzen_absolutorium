@@ -1,0 +1,793 @@
+/* General */
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+fieldset {
+    padding: 0;
+}
+
+.flagFilter label {
+    margin-left: 8px;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.flex-child {
+    flex: 1;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* Flags */
+
+.flag {
+    font-size: 1em;
+    float: right;
+    width: 82px;
+    border-radius: 25px;
+    background-color: rgb(214, 23, 10);
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    margin-left: 4px;
+}
+
+.flagClosed {
+    background-color: rgb(214, 23, 10);
+    color: white;
+}
+
+.flagOpen {
+    background-color: rgb(22, 182, 36);
+}
+
+.flagWorking {
+    background-color: orange;
+}
+
+.flagUrgent {
+    background-color: yellow;
+}
+
+
+/* TopNav */
+
+.topNav {
+    box-sizing: border-box;
+}
+
+.linkOutside {
+    float: right;
+    box-sizing: border-box;
+    text-align: center;
+    height: inherit;
+}
+
+.linkInside {
+    width: 100%;
+    display: block;
+}
+
+
+/* TopNav dropdown button
+    https://www.w3schools.com/howto/howto_css_dropdown.asp
+*/
+
+.dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    font-size: 16px;
+    border: none;
+    line-height: inherit;
+    padding: 0;
+    font-size: 1.1em;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+
+/* New Ticket UI */
+
+.newTicket textarea {
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: left;
+    width: 100%;
+    padding: 4 8 4 5;
+    border-radius: 4px;
+    min-height: 32px;
+    max-height: 256px;
+    border: 1px solid lightgray;
+}
+
+.newTicket textarea:focus {
+    outline: none;
+}
+
+
+/* Ticket Edit UI */
+
+.edit_body {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.edit_content {
+    overflow: auto;
+}
+
+.editTicket textarea {
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: left;
+    width: 100%;
+    padding: 4 8 4 5;
+    border-radius: 4px;
+    min-height: 64px;
+    max-height: 256px;
+    border: 1px solid lightgray;
+    resize: vertical;
+}
+
+.editTicket textarea:focus {
+    outline: none;
+}
+
+.header {
+    padding-left: 10px;
+}
+
+.message {
+    margin-bottom: 4px;
+}
+
+
+/* Print Tickets */
+
+.editButton {
+    margin-top: 4px;
+}
+
+.editButton a {
+    border: 1px solid grey;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    color: black;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.ticketCluster {
+    margin-top: 20px;
+    padding-bottom: 8px;
+    width: 100%;
+}
+
+@media (max-width: 760px) {
+    body {
+        /*background-color: wheat;*/
+        margin: 0 auto;
+        width: 100%;
+        min-width: 360px;
+    }
+    .topNav {
+        box-sizing: border-box;
+        height: 64px;
+        line-height: 64px;
+        background-color: #04AA6D;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+        font-size: 1.0em;
+    }
+    .linkOutside {
+        float: right;
+        box-sizing: border-box;
+        text-align: center;
+        height: inherit;
+        width: 96px;
+    }
+    .linkInside {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    .editButton button[type="submit"] {
+        float: right;
+    }
+    .ticketCluster {
+        overflow: hidden;
+    }
+    .ticketHead {
+        margin-bottom: 2px;
+    }
+    .ticketText input,
+    .ticketText input:focus {
+        outline: none;
+        background-color: transparent;
+        border: none;
+        margin-left: 8px;
+        font-size: 1em;
+        width: 100%;
+        min-width: 240px;
+    }
+    fieldset legend {
+        /*text-align: left;*/
+        margin-bottom: 8px;
+        font-size: 1.2em;
+    }
+    .filters fieldset {
+        border: none;
+        margin-top: 4px;
+        margin-bottom: 8px;
+    }
+    .filters {
+        margin-left: 16px;
+    }
+    .linkButton a {
+        /* So far only used on the New Ticket button */
+        font-size: 1.0em;
+        text-decoration: none;
+        background-color: #EEEEEE;
+        color: #333333;
+        padding: 2px 6px 2px 6px;
+        border: 1px solid #CCCCCC;
+        border-radius: 4px;
+    }
+    .linkButton {
+        margin-bottom: 16px;
+        margin-left: 8px;
+    }
+    .title {
+        min-width: 90px;
+    }
+    .notTitle {
+        white-space: nowrap;
+    }
+}
+
+@media (min-width:760px) and (max-width:1280px) {
+    /* General */
+    body {
+        margin: 0 auto;
+        width: 95%;
+    }
+    /* Top Navigation bar */
+    .topNav {
+        height: 64px;
+        line-height: 64px;
+        font-size: 1.1em;
+    }
+    .linkOutside {
+        width: 96px;
+    }
+    /* Print Tickets UI */
+    .sidebar {
+        box-sizing: border-box;
+        width: 15%;
+        float: left;
+    }
+    .tickets {
+        overflow: hidden;
+        margin-top: 16px;
+        width: 82%;
+        float: right;
+    }
+    .newTicket {
+        margin-bottom: 16px;
+        margin-top: 16px;
+    }
+    fieldset legend {
+        /*text-align: center;*/
+        margin-bottom: 8px;
+        font-size: 1.4em;
+    }
+    .filters fieldset {
+        border: none;
+        margin-top: 8px;
+        margin-bottom: 24px;
+    }
+    .flagFilter {
+        width: 96px;
+        /*border: 1px solid black;*/
+        margin: 0 auto;
+    }
+    .linkButton a {
+        /* So far only used on the New Ticket button */
+        font-size: 1.1em;
+        text-decoration: none;
+        background-color: #EEEEEE;
+        color: #333333;
+        padding: 2px 6px 2px 6px;
+        border: 1px solid #CCCCCC;
+        border-radius: 4px;
+        margin-left: 18px;
+        margin-bottom: 4px;
+        margin-top: 4px;
+    }
+    .sortButton {
+        /*Sidebar sort Apply button*/
+        border: none;
+        display: block;
+        margin: 0 auto;
+        padding: 2px 6px 2px 6px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        border-radius: 2px;
+        width: 128px;
+    }
+    .ticketHead {
+        width: 100%;
+    }
+    .ticketCluster {
+        overflow: hidden;
+    }
+    .filters {
+        text-align: center;
+    }
+    .flag2 {
+        text-align: left;
+    }
+    .ticketText {
+        border-spacing: 0;
+        padding: 0;
+    }
+    .ticketText input,
+    .ticketText input:focus {
+        outline: none;
+        background-color: transparent;
+        border: none;
+        margin-left: 8px;
+        font-size: 1em;
+        width: 100%;
+        min-width: 400px;
+    }
+    .title {
+        min-width: 110px;
+    }
+    .notTitle {
+        width: 85%;
+    }
+    /* New Ticket UI */
+    .newTicket_header {
+        font-size: 1.4em;
+    }
+    .newTicket_subject textarea {
+        resize: none;
+        margin-bottom: 8px;
+        width: 100%;
+    }
+    .newTicket_message textarea {
+        margin-bottom: 8px;
+        resize: vertical;
+    }
+    .newTicket_body {
+        width: 60%;
+        margin: 0 auto;
+        margin-top: 32px;
+    }
+    /* Ticket Edit UI */
+    .edit_body {
+        width: 75%;
+        margin-top: 24px;
+    }
+    .edit_content {
+        width: 100%;
+    }
+    .edit_row {
+        width: 100%;
+        height: inherit;
+        overflow: auto;
+    }
+    .edit_left {
+        float: left;
+        width: 70%;
+    }
+    .edit_right {
+        float: right;
+        width: 30%;
+    }
+    .msgInner {
+        white-space: pre-wrap;
+    }
+    .edit_ticketcontent table {
+        margin-left: 8px;
+    }
+    /* Settings UI */
+    .settings_sidebar {
+        width: 25%;
+        float: left;
+        overflow: hidden;
+    }
+    .settings_sidebarMenu {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 16px;
+    }
+    .settings_sidebarMenu a {
+        text-decoration: underline;
+    }
+    .settings_content {
+        overflow: hidden;
+    }
+    .settings_passwordChangeForm {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 64px;
+    }
+    .settings_passwordChangeForm label {
+        font-size: 1.2em;
+    }
+    .settings_passwordChangeForm input[type=text],
+    .settings_passwordChangeForm input[type=password] {
+        display: block;
+        width: 50%;
+        margin-bottom: 8px;
+        font-size: 1.1em;
+    }
+    .settings_passwordChangeForm input:focus {
+        outline: none;
+    }
+}
+
+@media (min-width:1281px) {
+    /* General */
+    body {
+        margin: 0 auto;
+        width: 70%;
+    }
+    /* Top Navigation bar */
+    .topNav {
+        height: 64px;
+        line-height: 64px;
+        font-size: 1.1em;
+    }
+    .linkOutside {
+        width: 96px;
+    }
+    /* Print Tickets UI */
+    .sidebar {
+        box-sizing: border-box;
+        width: 15%;
+        float: left;
+    }
+    .tickets {
+        overflow: hidden;
+        margin-top: 16px;
+        width: 82%;
+        float: right;
+    }
+    .newTicket {
+        margin-bottom: 16px;
+        margin-top: 16px;
+    }
+    fieldset legend {
+        /*text-align: center;*/
+        margin-bottom: 8px;
+        font-size: 1.4em;
+    }
+    .filters fieldset {
+        border: none;
+        margin-top: 8px;
+        margin-bottom: 24px;
+    }
+    .flagFilter {
+        width: 96px;
+        border: 1px solid black;
+        margin: 0 auto;
+    }
+    .linkButton a {
+        /* So far only used on the New Ticket button */
+        font-size: 1.1em;
+        text-decoration: none;
+        background-color: #EEEEEE;
+        color: #333333;
+        padding: 2px 6px 2px 6px;
+        border: 1px solid #CCCCCC;
+        border-radius: 4px;
+        margin-left: 18px;
+        margin-bottom: 4px;
+        margin-top: 4px;
+    }
+    .sortButton {
+        /*Sidebar sort Apply button*/
+        border: none;
+        display: block;
+        margin: 0 auto;
+        padding: 2px 6px 2px 6px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        border-radius: 2px;
+        width: 128px;
+    }
+    .filters {
+        text-align: center;
+    }
+    .flag2 {
+        text-align: left;
+    }
+    .ticketText {
+        border-spacing: 0;
+        padding: 0;
+    }
+    .ticketText input,
+    .ticketText input:focus {
+        outline: none;
+        background-color: transparent;
+        border: none;
+        margin-left: 8px;
+        font-size: 1em;
+        width: 100%;
+        min-width: 550px;
+    }
+    .title {
+        min-width: 120px;
+    }
+    .notTitle {}
+    /* New Ticket UI */
+    .newTicket_header {
+        font-size: 1.4em;
+    }
+    .newTicket_subject textarea {
+        resize: none;
+        margin-bottom: 8px;
+        width: 100%;
+    }
+    .newTicket_message textarea {
+        margin-bottom: 8px;
+        resize: vertical;
+    }
+    .newTicket_body {
+        width: 60%;
+        margin: 0 auto;
+        margin-top: 32px;
+    }
+    /* Ticket Edit UI */
+    .edit_body {
+        width: 75%;
+        margin-top: 24px;
+    }
+    .edit_content {
+        width: 100%;
+    }
+    .edit_row {
+        width: 100%;
+        height: inherit;
+        overflow: auto;
+    }
+    .edit_left {
+        float: left;
+        width: 70%;
+    }
+    .edit_right {
+        float: right;
+        width: 30%;
+    }
+    .msgInner {
+        white-space: pre-wrap;
+    }
+    .edit_ticketcontent table {
+        margin-left: 8px;
+    }
+    /* Settings UI */
+    .settings_sidebar {
+        width: 25%;
+        float: left;
+        overflow: hidden;
+    }
+    .settings_sidebarMenu {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 16px;
+    }
+    .settings_sidebarMenu a {
+        text-decoration: underline;
+    }
+    .settings_content {
+        overflow: hidden;
+    }
+    .settings_passwordChangeForm {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 64px;
+    }
+    .settings_passwordChangeForm label {
+        font-size: 1.2em;
+    }
+    .settings_passwordChangeForm input[type=text],
+    .settings_passwordChangeForm input[type=password] {
+        display: block;
+        width: 60%;
+        margin-bottom: 8px;
+        font-size: 1.1em;
+    }
+    .settings_passwordChangeForm input:focus {
+        outline: none;
+    }
+}
+
+@media (max-width:760px) {
+    /* Admin user management */
+    /* Thank you Stack Overflow
+     https://stackoverflow.com/questions/5533636/add-a-horizontal-scrollbar-to-an-html-table#:~:text=I%20couldn%27t%20get%20any%20of%20the%20above%20solutions%20to%20work.%20However%2C%20I%20found%20a%20hack%3A */
+    .adminUserTable {
+        /*width: 360px;*/
+    }
+    .adminUserTable table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 8px;
+    }
+    .adminUserTable tr {
+        line-height: 32px;
+    }
+    /* try removing the "hack" below to see how the table overflows the .body */
+    .scroll1 {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+    }
+    .scroll2 {
+        display: table-cell;
+        overflow-x: scroll;
+        overflow-y: visible;
+        width: 100%;
+    }
+    .adminUserTable a {
+        text-decoration: underline;
+    }
+    #id {
+        min-width: 28px;
+    }
+    #name {
+        min-width: 130px;
+    }
+    #email {
+        min-width: 220px;
+    }
+    #group {
+        min-width: 64px;
+        text-align: center;
+    }
+    #viewtickets {
+        min-width: 95px;
+        text-align: center;
+    }
+    #edit {
+        min-width: 64px;
+    }
+    .adminNavBar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        margin-top: 8px;
+    }
+    .adminNavBar li {
+        display: inline-block;
+        width: 33%;
+        white-space: normal;
+        text-align: center;
+    }
+    .linkButton {
+        margin-bottom: 0px;
+    }
+}
+
+@media (min-width:760px) {
+    /* Admin user management */
+    .adminUserTable {
+        width: 100%;
+        /*border: 1px solid red;*/
+    }
+    .adminUserTable table {
+        width: 100%;
+    }
+    .adminUserTable th {
+        text-align: left;
+    }
+    .adminUserTable a {
+        text-decoration: underline;
+    }
+    .adminNavBar {
+        width: 80%;
+        margin: 0 auto;
+        /*border: 1px solid blue;*/
+        font-size: 1.3em;
+        white-space: nowrap;
+        margin-top: 4px;
+        margin-bottom: 16px;
+    }
+    .adminNavBar li {
+        display: inline-block;
+        width: 33%;
+        white-space: normal;
+        text-align: center;
+    }
+    .adminNavBar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    .adminNavBar a {
+        text-decoration: none;
+    }
+    .editUserTable table {
+        /*width: 70%;
+        margin: 0 auto;*/
+        width: 100%;
+    }
+    .editUserTable input {
+        width: 100%;
+    }
+    .editUser_id {
+        width: 48px;
+    }
+    .editUserTable button {
+        margin: 0 auto;
+        display: block;
+        margin-top: 24px;
+    }
+    .adminUI {
+        width: 70%;
+        margin: 0 auto;
+    }
+    .adminPswdChange {
+        margin-top: 0px;
+        width: 100%;
+    }
+    .editUserTable select {
+        width: 100%;
+        height: 100%;
+        border: 1px solid #ccc;
+        vertical-align: top;
+        height: 20px;
+    }
+    .editUserTable input,
+    .editUserTable select {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+}
